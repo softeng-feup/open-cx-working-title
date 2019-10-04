@@ -1,0 +1,11 @@
+(FRONT)
+As a speaker, I want to be able to interact with my audiance, as well
+as receive good feedback, so that I can adapt and make a better presentation.
+
+(BACK)
+-Users connecting through an app
+-Instrumentation of app to be able to receive feedback
+-App allows to create/load presentations
+-App launch time of 1 second
+-screen to screen of 3 seconds
+-handle multiple users at the same time
