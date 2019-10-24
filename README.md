@@ -26,10 +26,10 @@ Please contact us!
 
 Thank you!
 
-Carlos Miguel Guerra Soeiro
-Daniel Gazola Bradaschia
-José Rafael Fidalgo Fonseca Matias
-Paulo André Areias Gomes Leal Pinto
+* Carlos Miguel Guerra Soeiro
+* Daniel Gazola Bradaschia
+* José Rafael Fidalgo Fonseca Matias
+* Paulo André Areias Gomes Leal Pinto
 
 ---
 
