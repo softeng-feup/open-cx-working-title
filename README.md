@@ -54,6 +54,8 @@ Start by contextualizing your module, describing the main concepts, terms, roles
 
 ### Use case diagram 
 
+![Use Cases](https://github.com/softeng-feup/open-cx-working-title/blob/master/Use%20Cases.png)
+
 Create a use-case diagram in UML with all high-level use cases possibly addressed by your module.
 
 Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
@@ -91,7 +93,7 @@ At the end, it is good to add a rough indication of the value of the user story 
 
 ### Domain model
 
-To better understand the context of the software system, it is very useful to have a simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
+![Domain Model](https://github.com/softeng-feup/open-cx-working-title/blob/master/Domain%20Model.png)
 
 ---
 
