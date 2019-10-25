@@ -38,12 +38,8 @@ An app that improves the interaction between the speaker and the audiance or vic
 
 ---
 ## Elevator Pitch
-Draft a small text to help you quickly introduce and describe your product in a short time and a few words (~800 characters), a technique usually known as elevator pitch.
 
-Take a look at the following links to learn some techniques:
-* [Crafting an Elevator Pitch](https://www.mindtools.com/pages/article/elevator-pitch.htm)
-* [The Best Elevator Pitch Examples, Templates, and Tactics - A Guide to Writing an Unforgettable Elevator Speech, by strategypeak.com](https://strategypeak.com/elevator-pitch-examples/)
-* [Top 7 Killer Elevator Pitch Examples, by toggl.com](https://blog.toggl.com/elevator-pitch-examples/)
+**To be Implemented**
 
 ---
 ## Requirements
@@ -56,100 +52,64 @@ Start by contextualizing your module, describing the main concepts, terms, roles
 
 ![Use Cases](https://github.com/softeng-feup/open-cx-working-title/blob/master/Use%20Cases.png)
 
-Create a use-case diagram in UML with all high-level use cases possibly addressed by your module.
+* **Send Message**. Every user of the app should be able to send message, as it is the main way of sending feedback and communicating. As a precondition, it should be noted that you will only be able to send messages if you have taken part in the conference
 
-Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
+* **Receive Message**. Every user of the app should be able to receive message, be it for communication or feedback. As a precondition, you should be able to send messages.
 
-Briefly describe each use case mentioning the following:
+* **Rate The Session**. Every user of the app should be able to rate the session, as it is a simple way to give feedback. You will only be able to rate a conference if you have taken part in it.
 
-* **Actor**. Name only the actor that will be initiating this use case, i.e. a person or other entity external to the software system being specified who interacts with the system and performs use cases to accomplish tasks. 
-* **Description**. Provide a brief description of the reason for and outcome of this use case, or a high-level description of the sequence of actions and the outcome of executing the use case. 
-* **Preconditions and Postconditions**. Include any activities that must take place, or any conditions that must be true, before the use case can be started (preconditions) and postconditions. Describe also the state of the system at the conclusion of the use case execution (postconditions). 
+* **Generate Invitation Code**. The speaker is able to generate invitation codes to send to his/hers audience, to play a game, for example. Only the speaker should be able to do it, and and a quiz need to be created before the invitation.
 
-* **Normal Flow**. Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal, expected conditions. This dialog sequence will ultimately lead to accomplishing the goal stated in the use case name and description. This is best done as a numbered list of actions performed by the actor, alternating with responses provided by the system. 
-* **Alternative Flows and Exceptions**. Document other, legitimate usage scenarios that can take place within this use case, stating any differences in the sequence of steps that take place. In addition, describe any anticipated error conditions that could occur during execution of the use case, and define how the system is to respond to those conditions. 
+* **Create Presentation**. The speaker is able to create slide presentations. Only he speaker should be able to do it, and a option to load a previously created presentations.
+
+* **Create Quiz**. The speaker is able to create quizes, as a game to interact with the audience. Only the speaker can do it, as long as a presentation exists.
+
+* **Check Attendence Statistics**. Both the speaker and moderators are able o check the session statistics, that can be used to improve future conferences and presentations. This will only be possible for session that exists.
+
+* **Filtering Messages**. The moderator is able to filter messages that arrive during a session, as a way to avoid spam and unecessary comments. This should only be possible to session that are ongoing.
+
+* **Ban/Kick Participants**. The moderator is able to Ban/Kick Participants, if it is considered necessary. This should only be possible to session that are ongoing.
 
 ### User stories
-This section will contain the requirements of the product described as **user stories**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
+This section contains the requirements of the product described as **user stories**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
 
-For each theme, or role, you may add a small description. User stories should be detailed in the tool you decided to use for project management (e.g. trello or github projects).
+* As a speaker, i want to receive feedback so that i can improve my presentation.
 
-A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
+* As the Audience, I want to be able o send feedback to the speaker, so that they can improve.
 
-*As a < user role >, I want < goal > so that < reason >.*
+* As a Moderator, I want to have access to the feedback provided by the audience, so that I can help the speaker.
 
+* As a Moderator, I want to send important information to the speakers, so that they can adapt.
 
-**INVEST in good user stories**. 
-You may add more details after, but the shorter and complete, the better. In order to decide if the user story is good, please follow the [INVEST guidelines](https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/).
+* As a Speaker, I want to have access to important information, such as time remaining, so that I can stay within my time limits.
 
-**User interface mockups**.
-After the user story text, you should add a draft of the corresponding user interfaces, a simple mockup or draft, if applicable.
+* As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
-**Acceptance tests**.
-For each user story you should write also the acceptance tests (textually in Gherkin), i.e., a description of scenarios (situations) that will help to confirm that the system satisfies the requirements addressed by the user story.
-
-**Value and effort**.
-At the end, it is good to add a rough indication of the value of the user story to the customers (e.g. [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method) and the team should add an estimation of the effort to implement it, for example, using t-shirt sizes (XS, S, M, L, XL).
+* As the Audience, I want to interact in the activities provided by the speakers.
 
 ### Domain model
 
 ![Domain Model](https://github.com/softeng-feup/open-cx-working-title/blob/master/Domain%20Model.png)
 
+Above we can see a representation of all the relationships involved. It should be noted that the moderator has the same privilegies as the speaker, however he possess access to more information, as he/her is capable of overseeing all the sessions.
+
 ---
 
 ## Architecture and Design
-The architecture of a software system encompasses the set of key decisions about its overall organization. 
-
-A well written architecture document is brief but reduces the amount of time it takes new programmers to a project to understand the code to feel able to make modifications and enhancements.
-
-To document the architecture requires describing the decomposition of the system in their parts (high-level components) and the key behaviors and collaborations between them. 
-
-In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
-
-### Logical architecture
-The purpose of this subsection is to document the high-level logical structure of the code, using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
-
-It can be beneficial to present the system both in a horizontal or vertical decomposition:
-* horizontal decomposition may define layers and implementation concepts, such as the user interface, business logic and concepts; 
-* vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
-
-### Physical architecture
-The goal of this subsection is to document the high-level physical structure of the software system (machines, connections, software components installed, and their dependencies) using UML deployment diagrams or component diagrams (separate or integrated), showing the physical structure of the system.
-
-It should describe also the technologies considered and justify the selections made. Examples of technologies relevant for openCX are, for example, frameworks for mobile applications (Flutter vs ReactNative vs ...), languages to program with microbit, and communication with things (beacons, sensors, etc.).
+**To be Implemented**
 
 ### Prototype
-To help on validating all the architectural, design and technological decisions made, we usually implement a vertical prototype, a thin vertical slice of the system.
-
-In this subsection please describe in more detail which, and how, user(s) story(ies) were implemented.
+A simple UI, with timer and chat is being implemented
 
 ---
 
 ## Implementation
-Regular product increments are a good practice of product management. 
 
-While not necessary, sometimes it might be useful to explain a few aspects of the code that have the greatest potential to confuse software engineers about how it works. Since the code should speak by itself, try to keep this section as short and simple as possible.
-
-Use cross-links to the code repository and only embed real fragments of code when strictly needed, since they tend to become outdated very soon.
+A simple UI has been implemented, as the code progresses, more details will be added.
 
 ---
 ## Test
-
-There are several ways of documenting testing activities, and quality assurance in general, being the most common: a strategy, a plan, test case specifications, and test checklists.
-
-In this section it is only expected to include the following:
-* test plan describing the list of features to be tested and the testing methods and tools;
-* test case specifications to verify the functionalities, using unit tests and acceptance tests.
- 
-A good practice is to simplify this, avoiding repetitions, and automating the testing actions as much as possible.
-
----
-## Configuration and change management
-
-Configuration and change management are key activities to control change to, and maintain the integrity of, a project’s artifacts (code, models, documents).
-
-For the purpose of ESOF, we will use a very simple approach, just to manage feature requests, bug fixes, and improvements, using GitHub issues and following the [GitHub flow](https://guides.github.com/introduction/flow/).
-
+**To be Implemented**
 
 ---
 
@@ -158,4 +118,4 @@ For the purpose of ESOF, we will use a very simple approach, just to manage feat
 As a project management tool, we have adopted [Trello](https://trello.com) as it is a simple tool that allows us to keep an overview
 of the development of the project, as well as plan future changes in which we can easily assign and register tasks. Outside that, Github is being used as the repository to keep the code and other resources.
 
-*[Trello/Working-Title] (https://trello.com/b/OZj5Xuko/esof-project)
+[Trello/Working-Title] (https://trello.com/b/OZj5Xuko/esof-project)
