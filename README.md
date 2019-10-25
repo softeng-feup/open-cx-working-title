@@ -62,12 +62,23 @@ Give each use case a concise, results-oriented name. Use cases should reflect th
 
 Briefly describe each use case mentioning the following:
 
-* **Actor**. Name only the actor that will be initiating this use case, i.e. a person or other entity external to the software system being specified who interacts with the system and performs use cases to accomplish tasks. 
-* **Description**. Provide a brief description of the reason for and outcome of this use case, or a high-level description of the sequence of actions and the outcome of executing the use case. 
-* **Preconditions and Postconditions**. Include any activities that must take place, or any conditions that must be true, before the use case can be started (preconditions) and postconditions. Describe also the state of the system at the conclusion of the use case execution (postconditions). 
+* **Send Message**. Every user of the app should be able to send message, as it is the main way of sending feedback and communicating. As a precondition, it should be noted that you will only be able to send messages if you have taken part in the conference
 
-* **Normal Flow**. Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal, expected conditions. This dialog sequence will ultimately lead to accomplishing the goal stated in the use case name and description. This is best done as a numbered list of actions performed by the actor, alternating with responses provided by the system. 
-* **Alternative Flows and Exceptions**. Document other, legitimate usage scenarios that can take place within this use case, stating any differences in the sequence of steps that take place. In addition, describe any anticipated error conditions that could occur during execution of the use case, and define how the system is to respond to those conditions. 
+* **Receive Message**. Every user of the app should be able to receive message, be it for communication or feedback. As a precondition, you should be able to send messages.
+
+* **Rate The Session**. Every user of the app should be able to rate the session, as it is a simple way to give feedback. You will only be able to rate a conference if you have taken part in it.
+
+* **Generate Invitation Code**. The speaker is able to generate invitation codes to send to his/hers audience, to play a game, for example. Only the speaker should be able to do it, and and a quiz need to be created before the invitation.
+
+* **Create Presentation**. The speaker is able to create slide presentations. Only he speaker should be able to do it, and a option to load a previously created presentations.
+
+* **Create Quiz**. The speaker is able to create quizes, as a game to interact with the audience. Only the speaker can do it, as long as a presentation exists.
+
+* **Check Attendence Statistics**. Both the speaker and moderators are able o check the session statistics, that can be used to improve future conferences and presentations. This will only be possible for session that exists.
+
+* **Filtering Messages**. The moderator is able to filter messages that arrive during a session, as a way to avoid spam and unecessary comments. This should only be possible to session that are ongoing.
+
+* **Ban/Kick Participants**. The moderator is able to Ban/Kick Participants, if it is considered necessary. This should only be possible to session that are ongoing.
 
 ### User stories
 This section contains the requirements of the product described as **user stories**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
@@ -153,4 +164,4 @@ For the purpose of ESOF, we will use a very simple approach, just to manage feat
 As a project management tool, we have adopted [Trello](https://trello.com) as it is a simple tool that allows us to keep an overview
 of the development of the project, as well as plan future changes in which we can easily assign and register tasks. Outside that, Github is being used as the repository to keep the code and other resources.
 
-*[Trello/Working-Title] (https://trello.com/b/OZj5Xuko/esof-project)
+[Trello/Working-Title] (https://trello.com/b/OZj5Xuko/esof-project)
