@@ -7,8 +7,8 @@ class Timer extends StatefulWidget {
 }
 
 class TimerState extends State<Timer> {
-  int _start = 10;
-int _current = 10;
+  int _start = 120;
+int _current = 120;
 
 void startTimer() {
   CountdownTimer countDownTimer = new CountdownTimer(
@@ -32,16 +32,34 @@ Widget build(BuildContext context) {
     appBar: AppBar(title: Text("Timer test")),
     body: Column(
       children: <Widget>[
+        Text(
+          "choose the amount of time",
+          ),
+        TextField(
+          onChanged: (text) {
+            _setTime(text);
+          },
+        ),
         RaisedButton(
           onPressed: () {
             startTimer();
           },
           child: Text("start"),
         ),
-        Text("$_current")
+        //Text("$_current")
+        Text((_current/60).toInt().toString() + ":" + (_current%60).toString())
       ],
     ),
   );
 }
+
+void _setTime(String time){
+  setState(() {
+    _start =  int.parse(time);
+    _current = int.parse(time);
+  });
+}
+
+
 }
 
