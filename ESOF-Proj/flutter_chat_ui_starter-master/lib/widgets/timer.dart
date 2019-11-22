@@ -7,8 +7,8 @@ class Timer extends StatefulWidget {
 }
 
 class TimerState extends State<Timer> {
-  int _start = 120;
-int _current = 120;
+  int _start = 0;
+  int _current = 0;
 
 void startTimer() {
   CountdownTimer countDownTimer = new CountdownTimer(
@@ -27,27 +27,92 @@ void startTimer() {
   });
 }
 
+bool qna = false;
+
 Widget build(BuildContext context) {
   return new Scaffold(
     appBar: AppBar(title: Text("Timer test")),
     body: Column(
       children: <Widget>[
         Text(
-          "choose the amount of time",
+          "Choose the amount of time for the conference (in minutes): ",
+          style: TextStyle(
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            ),
           ),
         TextField(
           onChanged: (text) {
+            if((!(_start != _current)) && qna == false){
             _setTime(text);
+            
+            }
           },
         ),
-        RaisedButton(
+      RaisedButton(
+        elevation: 5,
           onPressed: () {
+            if(qna == false){
             startTimer();
+            qna = true;
+            }
           },
           child: Text("start"),
         ),
-        //Text("$_current")
-        Text((_current/60).toInt().toString() + ":" + (_current%60).toString())
+        Text(
+          (_current/60).toInt().toString() + ":" + (_current%60).toString(),
+          style: TextStyle(
+            color: Colors.red,
+            fontWeight: FontWeight.w900,
+            fontSize: 60,
+          ),
+        ),
+        Text(
+          "Choose the amount of time for the QnA (in minutes): ",
+          style: TextStyle(
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            ),
+        ),
+        TextField(
+          onChanged: (text) {
+            if(_current == 0 && qna == true){
+            _setTime(text);
+            }
+          },
+        ),
+        RaisedButton(
+          elevation: 5,
+          onPressed: () {
+            startTimer();
+            qna = true;
+          },
+          child: Text("start"),
+        ),
+        FloatingActionButton(
+          onPressed: () {
+            return showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  content: Text(
+                    "In order to use the timer you must first state how much time you have for your conference.\n"
+                    "At this moment you can press the first start button.\n"
+                    "Once the timer has reached zero, you can state how much time you have for the Q&A moment.\n"
+                    "Enjoy!\n"
+                  ),
+                );
+              },
+            );
+          },
+          tooltip: 'Guide',
+          child: Icon(
+            Icons.info_outline
+          ),
+          backgroundColor: Colors.white,
+        ),
       ],
     ),
   );
@@ -55,10 +120,11 @@ Widget build(BuildContext context) {
 
 void _setTime(String time){
   setState(() {
-    _start =  int.parse(time);
-    _current = int.parse(time);
+    _start =  int.parse(time)*60;
+    _current = int.parse(time)*60;
   });
 }
+
 
 
 }
