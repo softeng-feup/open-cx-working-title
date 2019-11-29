@@ -105,7 +105,7 @@ A simple UI, with timer and chat is being implemented
 
 ## Implementation
 
-A simple UI has been implemented, as the code progresses, more details will be added.
+A simple UI is being implemented, as the code progresses. So far a listing of the conferences, along with its respectives themes and times can be viewed. A timer function for the speaker has also been implemented , in which the user is able to set specific timers for its conference.
 
 ---
 ## Test
