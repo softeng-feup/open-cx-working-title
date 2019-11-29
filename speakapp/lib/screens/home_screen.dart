@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Working Title',
+          'SpeakApp',
           style: TextStyle(
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             DrawerHeader(
               child: Text(
-                'Working title',
+                'SpeakApp',
                 style: TextStyle(
                   fontSize: 50.0,
                   color: Colors.white,
