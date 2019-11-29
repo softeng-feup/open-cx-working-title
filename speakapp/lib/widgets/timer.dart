@@ -67,7 +67,7 @@ Widget build(BuildContext context) {
           child: Text(
             (_current/60).toInt().toString() + ":" + (_current%60).toString(),
             style: TextStyle(
-              color: Colors.red,
+              color: Colors.blue[900],
               fontWeight: FontWeight.w900,
               fontSize: 60,
             ),
