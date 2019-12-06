@@ -39,14 +39,13 @@ An app that improves the interaction between the speaker and the audiance or vic
 ---
 ## Elevator Pitch
 
-**To be Implemented**
+Have you ever needed a quick and simple app for your event, but didn't know where to start? We at the Working Title can help you develop
+a quick, simple and easy to use app, with the tools that you desire. Currently we provide every tool necessary so that your speakers and audience can have a quality time in your conference. As we work with firebase, a reliable database provided by Google, there is no need for extra technology or investment, so all you need is a smartphone or tablet!
 
 ---
 ## Requirements
 
-In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
-
-Start by contextualizing your module, describing the main concepts, terms, roles, scope and boundaries of the application domain addressed by the project.
+A smartphone or tablet with internet access is required, along with a google account.
 
 ### Use case diagram 
 
@@ -105,7 +104,7 @@ A simple UI, with timer and chat is being implemented
 
 ## Implementation
 
-A simple UI is being implemented, as the code progresses. So far a listing of the conferences, along with its respectives themes and times can be viewed. A timer function for the speaker has also been implemented , in which the user is able to set specific timers for its conference.
+As we adopted an agile method of implementation, we developed the tools considering a cost/necessity of our user stories. The UI was adapted as new tools were implemented, while keeping in mind that it needed to be intuitive. Code organization and quality were a main goal from the beginning, as we intend to deliver the best product possible. 
 
 ---
 ## Test
