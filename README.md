@@ -39,13 +39,14 @@ An app that improves the interaction between the speaker and the audiance or vic
 ---
 ## Elevator Pitch
 
-Have you ever needed a quick and simple app for your event, but didn't know where to start? We at the Working Title can help you develop
-a quick, simple and easy to use app, with the tools that you desire. Currently we provide every tool necessary so that your speakers and audience can have a quality time in your conference. As we work with firebase, a reliable database provided by Google, there is no need for extra technology or investment, so all you need is a smartphone or tablet!
+Have you ever needed a quick and simple app for your event, but didn't know where to start? We at the Working Title can help you with
+a quick, simple and easy to use app, with the tools that you desire. Currently, we provide ways for the speaker to control the time of the conference and the audience can get all the information needed to attend their favorite confernce. As we work with firebase, a reliable database provided by Google, there is no need for extra technology or investment, so all you need is a smartphone or tablet!
 
 ---
 ## Requirements
 
-A smartphone or tablet with internet access is required, along with a google account.
+* A smartphone or tablet with internet access is required, along with a google account.
+* App is only available on android.
 
 ### Use case diagram 
 
@@ -106,10 +107,14 @@ Above we can see a representation of all the relationships involved. It should b
 **To be Implemented**
 
 ### Prototype
+
 A simple UI, with listing of conferences and their respectives themes is implemented. New features, such as timer and login are being implemented.
 
 ![Prototype1](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype1.png)
 
+A sign in option through google account is available.
+
+![Prototype2](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype2.png)
 
 ---
 
@@ -119,7 +124,8 @@ As we adopted an agile method of implementation, we developed the tools consider
 
 ---
 ## Test
-**To be Implemented**
+
+Manual testing is being done while automated tests are being implemented. 
 
 ---
 
