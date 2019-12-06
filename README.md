@@ -98,7 +98,10 @@ Above we can see a representation of all the relationships involved. It should b
 **To be Implemented**
 
 ### Prototype
-A simple UI, with timer and chat is being implemented
+A simple UI, with listing of conferences and their respectives themes is implemented. New features, such as timer and login are being implemented.
+
+![Prototype1]()
+
 
 ---
 
