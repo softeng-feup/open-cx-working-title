@@ -72,19 +72,27 @@ A smartphone or tablet with internet access is required, along with a google acc
 ### User stories
 This section contains the requirements of the product described as **[user stories](https://trello.com/b/OZj5Xuko/esof-project)**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
 
-* As a speaker, i want to receive feedback so that i can improve my presentation.
+* As a Speaker, I want to able to set and see the time remainig of my presentation, so that I can stay within my time limits.
 
-* As the Audience, I want to be able o send feedback to the speaker, so that they can improve.
+* As a Speaker, I want to be able to set a timer for my QnA period, so that I can know how much time I can spend on the questions
 
-* As a Moderator, I want to have access to the feedback provided by the audience, so that I can help the speaker.
+* As a Speaker, I want to have an easy access to information, so that I can easily navigate through the information about the conference.
 
-* As a Moderator, I want to send important information to the speakers, so that they can adapt.
+* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
 
-* As a Speaker, I want to have access to important information, such as time remaining, so that I can stay within my time limits.
+* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
 
 * As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
-* As the Audience, I want to interact in the activities provided by the speakers.
+* As Users, we want to have a feedback system:
+  * As a speaker, i want to receive feedback so that i can improve my presentation.
+  * As the Audience, I want to be able o send feedback to the speaker, so that they can improve.
+  
+* As a User, I want to send question during QnA, so that I can interact with the speaker.  
+
+* As the Audience, I want to interact in the activities provided by the speakers, such as quizes.
+
+* As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
 ### Domain model
 
@@ -100,7 +108,7 @@ Above we can see a representation of all the relationships involved. It should b
 ### Prototype
 A simple UI, with listing of conferences and their respectives themes is implemented. New features, such as timer and login are being implemented.
 
-![Prototype1]()
+![Prototype1](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype1.png)
 
 
 ---
