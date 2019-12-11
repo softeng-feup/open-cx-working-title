@@ -39,14 +39,14 @@ An app that improves the interaction between the speaker and the audiance or vic
 ---
 ## Elevator Pitch
 
-**To be Implemented**
+Have you ever needed a quick and simple app for your event, but didn't know where to start? We at the Working Title can help you with
+a quick, simple and easy to use app, with the tools that you desire. Currently, we provide ways for the speaker to control the time of the conference and the audience can get all the information needed to attend their favorite confernce. As we work with firebase, a reliable database provided by Google, there is no need for extra technology or investment, so all you need is a smartphone or tablet!
 
 ---
 ## Requirements
 
-In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
-
-Start by contextualizing your module, describing the main concepts, terms, roles, scope and boundaries of the application domain addressed by the project.
+* A smartphone or tablet with internet access is required, along with a google account.
+* App is only available on android.
 
 ### Use case diagram 
 
@@ -73,19 +73,27 @@ Start by contextualizing your module, describing the main concepts, terms, roles
 ### User stories
 This section contains the requirements of the product described as **[user stories](https://trello.com/b/OZj5Xuko/esof-project)**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
 
-* As a speaker, i want to receive feedback so that i can improve my presentation.
+* As a Speaker, I want to able to set and see the time remainig of my presentation, so that I can stay within my time limits.
 
-* As the Audience, I want to be able o send feedback to the speaker, so that they can improve.
+* As a Speaker, I want to be able to set a timer for my QnA period, so that I can know how much time I can spend on the questions
 
-* As a Moderator, I want to have access to the feedback provided by the audience, so that I can help the speaker.
+* As a Speaker, I want to have an easy access to information, so that I can easily navigate through the information about the conference.
 
-* As a Moderator, I want to send important information to the speakers, so that they can adapt.
+* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
 
-* As a Speaker, I want to have access to important information, such as time remaining, so that I can stay within my time limits.
+* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
 
 * As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
-* As the Audience, I want to interact in the activities provided by the speakers.
+* As Users, we want to have a feedback system:
+  * As a speaker, i want to receive feedback so that i can improve my presentation.
+  * As the Audience, I want to be able o send feedback to the speaker, so that they can improve.
+  
+* As a User, I want to send question during QnA, so that I can interact with the speaker.  
+
+* As the Audience, I want to interact in the activities provided by the speakers, such as quizes.
+
+* As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
 ### Domain model
 
@@ -99,17 +107,25 @@ Above we can see a representation of all the relationships involved. It should b
 **To be Implemented**
 
 ### Prototype
-A simple UI, with timer and chat is being implemented
+
+A simple UI, with listing of conferences and their respectives themes is implemented. New features, such as timer and login are being implemented.
+
+![Prototype1](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype1.png)
+
+A sign in option through google account is available.
+
+![Prototype2](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype2.png)
 
 ---
 
 ## Implementation
 
-A simple UI is being implemented, as the code progresses. So far a listing of the conferences, along with its respectives themes and times can be viewed. A timer function for the speaker has also been implemented , in which the user is able to set specific timers for its conference.
+As we adopted an agile method of implementation, we developed the tools considering a cost/necessity of our user stories. The UI was adapted as new tools were implemented, while keeping in mind that it needed to be intuitive. Code organization and quality were a main goal from the beginning, as we intend to deliver the best product possible. 
 
 ---
 ## Test
-**To be Implemented**
+
+Manual testing is being done while automated tests are being implemented. 
 
 ---
 
