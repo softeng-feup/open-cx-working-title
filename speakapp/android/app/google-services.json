@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "667797269171",
+    "firebase_url": "https://speakapp-68905.firebaseio.com",
+    "project_id": "speakapp-68905",
+    "storage_bucket": "speakapp-68905.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667797269171:android:9640e265179644c6ef1ec6",
+        "android_client_info": {
+          "package_name": "speakapp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667797269171-04265urhg5e5t8m0r3u703k3ikde00uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "speakapp.com",
+            "certificate_hash": "383e011e4b8535d2071c8053507dddaf59440535"
+          }
+        },
+        {
+          "client_id": "667797269171-9idb2scqqjdpff2q1b57t362vrn4k83m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK7v16rP5drtElQZeANPtn32-d4Dow9ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667797269171-9idb2scqqjdpff2q1b57t362vrn4k83m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

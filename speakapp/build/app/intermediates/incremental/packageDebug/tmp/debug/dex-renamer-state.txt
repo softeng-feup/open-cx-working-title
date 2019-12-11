@@ -1,0 +1,4 @@
+#Fri Dec 06 22:46:32 GMT 2019
+base.0=C\:\\Users\\Operador\\Desktop\\PC\\ESOF\\open-cx-working-title\\speakapp\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

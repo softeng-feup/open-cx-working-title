@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:speakapp/screens/home_screen.dart';
+import 'package:speakapp/screens/login.dart';
 import 'package:speakapp/widgets/timer.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue[900],
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
