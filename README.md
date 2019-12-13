@@ -125,7 +125,33 @@ As we adopted an agile method of implementation, we developed the tools consider
 ---
 ## Test
 
-Manual testing is being done while automated tests are being implemented. 
+As recommended in theoretical classes, we will be using Behavior-Driven Development to test the following features:
+ * Timer
+ * Add Conferences
+ * Add Reviews
+ 
+To help automate this process Gherkin has been choosen due to its already established connection with firebase. The following represents tests that are being developed:
+
+ Feature: Timer
+  * The timer should decrement when the button is pressed.
+  * Scenario: Timer decrements when the button is pressed
+  * Given I expect the "timer" to be "0"
+  * When I set the "timer" and presses the button
+  * Then I expect the "counter" to be "0" after the time I set has passed
+  
+ Feature: Conferences
+  * The Conferences list should grow when a new conference is added.
+  * Scenario: Conferences list grow when a new conference is added
+  * Given I expect the "Conference List" to be "empty"
+  * When I add a conference
+  * Then I expect the "Conference List" to have a new conference
+  
+ Feature: Review
+  * The Review list should grow when a new review is added.
+  * Scenario: Review list grow when a new review is added
+  * Given I expect the "Review List" to be "empty"
+  * When I add a review
+  * Then I expect the "Review List" to have a new review
 
 ---
 
