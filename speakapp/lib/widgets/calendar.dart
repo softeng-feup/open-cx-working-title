@@ -5,6 +5,7 @@ import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart'
 import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/classes/event_list.dart';
 
+
 class CalendarPage2 extends StatefulWidget {
   @override
   _CalendarPage2State createState() => new _CalendarPage2State();
@@ -38,43 +39,46 @@ List<DateTime> absentDates = [
 ];
 
 class _CalendarPage2State extends State<CalendarPage2> {
-  DateTime _currentDate2 = DateTime.now();
-  static Widget _presentIcon(String day) => Container(
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.all(
-            Radius.circular(1000),
-          ),
-        ),
-        child: Center(
-          child: Text(
-            day,
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
-        ),
-      );
-  static Widget _absentIcon(String day) => Container(
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.all(
-            Radius.circular(1000),
-          ),
-        ),
-        child: Center(
-          child: Text(
-            day,
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
-        ),
-      );
 
   EventList<Event> _markedDateMap = new EventList<Event>(
     events: {},
   );
+
+  DateTime _currentDate2 = DateTime.now();
+  static Widget _presentIcon(String day) => Container(
+    decoration: BoxDecoration(
+      color: Colors.blue,
+      borderRadius: BorderRadius.all(
+        Radius.circular(1000),
+      ),
+    ),
+    child: Center(
+      child: Text(
+        day,
+        style: TextStyle(
+          color: Colors.black,
+        ),
+      ),
+    ),
+  );
+  static Widget _absentIcon(String day) => Container(
+    decoration: BoxDecoration(
+      color: Colors.red,
+      borderRadius: BorderRadius.all(
+        Radius.circular(1000),
+      ),
+    ),
+    child: Center(
+      child: Text(
+        day,
+        style: TextStyle(
+          color: Colors.black,
+        ),
+      ),
+    ),
+  );
+
+
 
   CalendarCarousel _calendarCarouselNoHeader;
 
@@ -96,40 +100,55 @@ class _CalendarPage2State extends State<CalendarPage2> {
         ),
       );}
 
-      /*for (int i = 0; i < len; i++) {
-        _markedDateMap.add(
-          absentDates[i],
-          new Event(
-            date: absentDates[i],
-            title: 'Event 5',
-            icon: _absentIcon(
-              absentDates[i].day.toString(),
-            ),
-          ),
-        );
-      }*/
-    
 
     _calendarCarouselNoHeader = CalendarCarousel<Event>(
       height: cHeight * 0.54,
       onDayPressed: (DateTime date, List<Event> events) {
-        presentDates.add(date);
-        print(date.toString());
-        print(events.toString());
-        _markedDateMap.add(
-          date,
-          new Event(
-            date: date,
-            title: 'YOLO',
-            icon: _presentIcon(
-              date.day.toString(),
-            ))
+        showDialog(
+          context: context,
+          builder: (BuildContext context){
+            return AlertDialog(
+              title: new Text('Create new Event'),
+              content: new Text('Do you wish to add a new event on\n'
+                  + date.day.toString() + '-' + date.month.toString() + '-' + date.year.toString()
+                  + ' at ' + date.hour.toString() + ':' + date.minute.toString()
+                  + ' ?'),
+              actions: <Widget>[
+                new FlatButton(
+                  child: new Text('YES'),
+                  onPressed: (){
+                    presentDates.add(date);
+                    Navigator.of(context).pop();
+                  },
+                ),
+                new FlatButton(
+                  child: new Text('NO'),
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          },
         );
-        print('Ola');
+        for(int i = 0; i < presentDates.length; i++){
+          print("fok");
+          _markedDateMap.add(
+            presentDates[i],
+            new Event(
+              date: presentDates[i],
+              title: 'Event 5',
+              icon: _presentIcon(
+                presentDates[i].day.toString(),
+              ),
+            ),
+          );
+        }
+        print('Pressed Day');
       },
       weekdayTextStyle: TextStyle(
-        color: Colors.black
-        ),
+          color: Colors.black
+      ),
       weekendTextStyle: TextStyle(
         color: Colors.blue,
       ),
@@ -138,7 +157,7 @@ class _CalendarPage2State extends State<CalendarPage2> {
       markedDateShowIcon: true,
       markedDateIconMaxShown: 1,
       markedDateMoreShowTotal:
-          null, // null for not showing hidden events indicator
+      null, // null for not showing hidden events indicator
       markedDateIconBuilder: (event) {
         return event.icon;
       },
@@ -153,7 +172,6 @@ class _CalendarPage2State extends State<CalendarPage2> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             _calendarCarouselNoHeader,
-            //markerRepresent(Colors.red, "Absent"),
             markerRepresent(Colors.blue, "Conference"),
           ],
         ),
@@ -172,85 +190,7 @@ class _CalendarPage2State extends State<CalendarPage2> {
       ),
     );
   }
+
+
 }
-/*//AS IT WAS 
-class CalendarCarouselExample2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 20.0),
-      child: CalendarCarousel<Event>(
-        onDayPressed: (DateTime date, List<Event> events) {
-          //take an action with date and its events
-        },
-        thisMonthDayBorderColor: Colors.transparent,
-        selectedDayButtonColor: Color(0xFF30A9B2),
-        selectedDayBorderColor: Color(0xFF30A9B2),
-        selectedDayTextStyle: TextStyle(color: Colors.white),
-        weekendTextStyle: TextStyle(color: Colors.white),
-        daysTextStyle: TextStyle(color: Colors.white),
-        nextDaysTextStyle: TextStyle(color: Colors.grey),
-        prevDaysTextStyle: TextStyle(color: Colors.grey),
-        weekdayTextStyle: TextStyle(color: Colors.grey),
-        weekDayFormat: WeekdayFormat.short,
-        firstDayOfWeek: 0,
-        showHeader: false,
-        isScrollable: false,
-        weekFormat: false,
-        height: 280.0,
-        selectedDateTime: DateTime(2019, 4, 9),
-        daysHaveCircularBorder: true,
-        customGridViewPhysics: NeverScrollableScrollPhysics(),
-        markedDatesMap: _getCarouselMarkedDates(),
-        markedDateWidget: Container(
-          height: 3,
-          width: 3,
-          decoration: new BoxDecoration(
-            color: Color(0xFF30A9B2),
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
-          ),
-        ),
-      ),
-    );
-  }
-
-  EventList<Event> _getCarouselMarkedDates() {
-    return EventList<Event>(
-      events: {
-        new DateTime(2019, 4, 3): [
-          new Event(
-            date: new DateTime(2019, 4, 3),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 5): [
-          new Event(
-            date: new DateTime(2019, 4, 5),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 22): [
-          new Event(
-            date: new DateTime(2019, 4, 22),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 24): [
-          new Event(
-            date: new DateTime(2019, 4, 24),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 26): [
-          new Event(
-            date: new DateTime(2019, 4, 26),
-            title: 'Event 1',
-          ),
-        ],
-      },
-    );
-  }
-
-}*/
 
