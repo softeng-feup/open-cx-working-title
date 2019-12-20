@@ -132,7 +132,6 @@ class _CalendarPage2State extends State<CalendarPage2> {
           },
         );
         for(int i = 0; i < presentDates.length; i++){
-          print("fok");
           _markedDateMap.add(
             presentDates[i],
             new Event(
