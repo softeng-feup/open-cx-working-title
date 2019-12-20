@@ -73,7 +73,7 @@ a quick, simple and easy to use app, with the tools that you desire. Currently, 
 ### User stories
 This section contains the requirements of the product described as **[user stories](https://trello.com/b/OZj5Xuko/esof-project)**, organized in a global **[user story map](https://plan.io/blog/user-story-mapping/)** with **user roles** or **themes**.
 
-* As a Speaker, I want to able to set and see the time remainig of my presentation, so that I can stay within my time limits.
+* As a Speaker, I want to able to set and see the time remaining of my presentation, so that I can stay within my time limits.
 
 * As a Speaker, I want to be able to set a timer for my QnA period, so that I can know how much time I can spend on the questions
 
@@ -95,6 +95,10 @@ This section contains the requirements of the product described as **[user stori
 
 * As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
+* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
+
+* As a user, I want to have a calendar, so that I can know when/where to go.
+
 ### Domain model
 
 ![Domain Model](https://github.com/softeng-feup/open-cx-working-title/blob/master/Domain%20Model.png)
@@ -104,7 +108,19 @@ Above we can see a representation of all the relationships involved. It should b
 ---
 
 ## Architecture and Design
-**To be Implemented**
+
+### Logical Architecture
+
+![LogicalArch](https://github.com/softeng-feup/open-cx-working-title/blob/master/Logical%20Architecture.png)
+
+The UML diagram above represents the logical architecture of our code which consists essentially of an App and a Server that will handle a Database where all the infomation is stored. The app will also be responsible to display all the information necessary to the user. The database of choice was Firebase, due to its connectivity with Flutter, our toolkit for developing the app.
+
+
+### Physical Architecture
+
+![PhysicalArch](https://github.com/softeng-feup/open-cx-working-title/blob/master/Physical%20Architecture.png)
+
+As shown in the diagram above, the physical structure of our software is divided into two parts. Each node is a hardware requirement for our product, while inside it is detailed the software features to be used.
 
 ### Prototype
 
@@ -125,7 +141,33 @@ As we adopted an agile method of implementation, we developed the tools consider
 ---
 ## Test
 
-Manual testing is being done while automated tests are being implemented. 
+As recommended in theoretical classes, we will be using Behavior-Driven Development to test the following features:
+ * Timer
+ * Add Conferences
+ * Add Reviews
+ 
+To help automate this process Gherkin has been choosen due to its already established connection with firebase. The following represents tests that are being developed:
+
+ Feature: Timer
+  * The timer should decrement when the button is pressed.
+  * Scenario: Timer decrements when the button is pressed
+  * Given I expect the "timer" to be "0"
+  * When I set the "timer" and presses the button
+  * Then I expect the "counter" to be "0" after the time I set has passed
+  
+ Feature: Conferences
+  * The Conferences list should grow when a new conference is added.
+  * Scenario: Conferences list grow when a new conference is added
+  * Given I expect the "Conference List" to be "empty"
+  * When I add a conference
+  * Then I expect the "Conference List" to have a new conference
+  
+ Feature: Review
+  * The Review list should grow when a new review is added.
+  * Scenario: Review list grow when a new review is added
+  * Given I expect the "Review List" to be "empty"
+  * When I add a review
+  * Then I expect the "Review List" to have a new review
 
 ---
 
