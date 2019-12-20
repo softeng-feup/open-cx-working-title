@@ -1,0 +1,2 @@
+# Referenced at C:\Users\Operador\Desktop\PC\ESOF\open-cx-working-title\speakapp\build\app\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:25
+-keep class io.flutter.app.FlutterApplication { <init>(...); }
