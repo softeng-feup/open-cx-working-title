@@ -101,7 +101,7 @@ This section contains the requirements of the product described as **[user stori
 
 ![Domain Model](https://github.com/softeng-feup/open-cx-working-title/blob/master/Domain%20Model.png)
 
-Above we can see a representation of all the relationships involved. It should be noted that the moderator has the same privilegies as the speaker, however he possess access to more information, as he/her is capable of overseeing all the sessions.
+Above we can see a representation of all the relationships involved. It should be noted that some attributtes have not been implemented, namely *numOfAtendees, author, time*.
 
 ---
 
