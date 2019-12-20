@@ -41,7 +41,6 @@ class _ConferenceScreen extends State<ConferenceScreen> {
           stream: Firestore.instance
               .collection('Messages')
               .where('ConferenceName', isEqualTo: widget.conference)
-              .limit(10)
               .snapshots(),
           builder: (context, snapshot) {
             if (!snapshot.hasData)
