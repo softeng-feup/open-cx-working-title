@@ -34,7 +34,7 @@ Thank you!
 ---
 
 ## Product Vision
-An app that improves the interaction between the speaker and the audiance or vice-versa, allowing for the sepaker to easily change slides, start games and videos or send links to his/hers guests from a smartphone.
+An app that improves the interaction between the speaker and the audience or vice-versa, allowing for the speaker to easily change slides, start games and videos or send links to his/hers guests from a smartphone. The users are also able to comments about the conferences, so that the speaker has a good amount of feedback. The speaker is capable of checking and setting timers to help his/hers presentation.
 
 ---
 ## Elevator Pitch
