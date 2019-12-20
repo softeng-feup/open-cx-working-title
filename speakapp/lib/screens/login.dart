@@ -64,7 +64,7 @@ class LoginScreenState extends State<LoginScreen> {
     if(FirebaseUser != null) {
       print("signed in " + user.displayName);
       Fluttertoast.showToast(msg: "Sign in success");
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(user.displayName)));
     }
     else{
       Fluttertoast.showToast(msg: "Sign in fail");

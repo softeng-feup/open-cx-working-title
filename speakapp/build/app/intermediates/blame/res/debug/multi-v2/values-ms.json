@@ -4,24 +4,7 @@
             "outputFile": "C:\\Users\\Operador\\Desktop\\PC\\ESOF\\open-cx-working-title\\speakapp\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\8fe8d1145fd6ee2ddbb0b7b298646f1d\\res\\values-ms\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1309",
-                        "endColumns": "204",
-                        "endOffsets": "1509"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.0.aar\\8639ac65a43fcfcbe0d914f792e8df8f\\res\\values-ms\\values-ms.xml",
+                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.1.aar\\d3aca4181760311d641531e0a1635e55\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\4e4ff997bb99b9ed0e3b35aec91941c3\\res\\values-ms\\values.xml",
+                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-17.0.0.aar\\caffd24d3e40ce2908b4aa5302eb2507\\res\\values-ms\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1309",
+                        "endColumns": "204",
+                        "endOffsets": "1509"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Operador\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\62dbcf8cc9cd5a6174f5732dcea2dd5c\\res\\values-ms\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

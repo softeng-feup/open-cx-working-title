@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:speakapp/widgets/calendar.dart';
 import 'package:speakapp/widgets/timer.dart';
+import 'package:speakapp/screens/add_conference.dart';
 
 class CategorySelector extends StatefulWidget {
+  final username;
+  CategorySelector(this.username);
   @override
   _CategorySelectorState createState() => _CategorySelectorState();
 }
 
 class _CategorySelectorState extends State<CategorySelector> {
   int selectedIndex = 0;
-  final List<String> categories = ['Conferences', 'Timer'];
+  final List<String> categories = ['Conferences', 'Add Conference', 'Timer', 'Calendar'];
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,21 @@ class _CategorySelectorState extends State<CategorySelector> {
               if (selectedIndex == 1) {
                 Navigator.push(
                   context,
+                  MaterialPageRoute(builder: (context) => ConferenceAdd(widget.username)),
+                );
+                selectedIndex = 0;
+              }
+              if (selectedIndex == 2) {
+                Navigator.push(
+                  context,
                   MaterialPageRoute(builder: (context) => Timer()),
+                );
+                selectedIndex = 0;
+              }
+              if (selectedIndex == 3) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CalendarPage2()),
                 );
                 selectedIndex = 0;
               }

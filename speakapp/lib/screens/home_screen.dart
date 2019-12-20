@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:speakapp/widgets/category_selector.dart';
 import 'package:speakapp/widgets/Conferences.dart';
 import 'package:speakapp/widgets/timer.dart';
+import 'package:speakapp/screens/add_conference.dart';
 
 class HomeScreen extends StatefulWidget {
+  final String username;
+
+  HomeScreen(this.username);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -51,6 +55,20 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               title: Text(
+                'Add Conference',
+                style: TextStyle(
+                  fontSize: 30.0,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ConferenceAdd(widget.username)),
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
                 'Timer',
                 style: TextStyle(
                   fontSize: 30.0,
@@ -68,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: <Widget>[
-          CategorySelector(),
+          CategorySelector(widget.username),
           Expanded(
             child: Container(
               height: 500.0,
@@ -77,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: Column(
                 children: <Widget>[
-                  Conferences(),
+                  Conferences(widget.username),
                 ],
               ),
             ),
