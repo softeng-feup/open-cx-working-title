@@ -81,8 +81,6 @@ This section contains the requirements of the product described as **[user stori
 
 * As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
 
-* As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.
-
 * As a Speaker, I want to have special tools (such as to be able to create quizes) that traditional editors don't have, so that I can provide a better time for the audience.
 
 * As Users, we want to have a feedback system:
@@ -131,6 +129,13 @@ A simple UI, with listing of conferences and their respectives themes is impleme
 A sign in option through google account is available.
 
 ![Prototype2](https://github.com/softeng-feup/open-cx-working-title/blob/master/prototype2.png)
+
+As we started the project, we tackled the following user stories: "*As a Speaker, I want to have an easy access to information, so that I can easily navigate through the information about the conference.*" and "*As a User, I want to be able to easily access all the conferences and their themes, so that I can organize my schedule.* " which allowed us to start using Flutter from the get go, developing a simple UI for listing conferences and such. When the app started to take form, a database became necessary, so we chose to utilize Firebase, as we can use google accounts that already exists, eliminating the need to create a sign up method.
+
+
+
+
+ 
 
 ---
 
